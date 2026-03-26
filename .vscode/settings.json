@@ -55,5 +55,10 @@
   "C_Cpp_Runner.useLeakSanitizer": false,
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
-  "C_Cpp_Runner.msvcSecureNoWarnings": false
+  "C_Cpp_Runner.msvcSecureNoWarnings": false,
+  "cmake.configureOnOpen": true,
+  "cmake.buildDirectory": "${workspaceFolder}/build",
+  "cmake.cmakePath": "/opt/homebrew/bin/cmake",
+  "cmake.ctestPath": "/opt/homebrew/bin/ctest",
+  "cmake.ctest.testExplorerIntegrationEnabled": true
 }

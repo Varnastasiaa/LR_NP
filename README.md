@@ -1,6 +1,4 @@
-# LR_NP
-
-Лабораторна робота з обробки векторів `double` на C++.
+# Лабораторна робота з обробки векторів `double` на C++.
 
 ## Що робить програма
 
@@ -57,3 +55,37 @@ g++ -std=c++17 NP.cpp -o NP
 - `countA`, `countB`
 
 Для прикладу поточний `result.json` у репозиторії містить тестовий запуск для `countA = 10` та `countB = 5`.
+
+## Юніт-тести
+
+У проєкті є окремий файл тестів: `tests/np_tests.cpp`.
+
+Тести перевіряють:
+- генерацію вектора (`generateVector`);
+- суми по групах (`SumGroups`);
+- суму всього вектора (`SumVector`);
+- видалення дублікатів (`deleteCopy`);
+- індекс максимуму (`sumindex`);
+- коректний запис у `result.json` (`print`).
+
+### Запуск усіх тестів через CMake + CTest
+
+```bash
+cmake -S . -B build
+cmake --build build
+ctest --test-dir build --output-on-failure
+```
+
+### Запуск тестового раннера напряму
+
+Запуск усіх тестів:
+
+```bash
+./build/np_tests
+```
+
+Запуск одного тесту:
+
+```bash
+./build/np_tests sum_groups_basic
+```
